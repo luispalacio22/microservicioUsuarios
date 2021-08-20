@@ -13,6 +13,8 @@ public class User {
     private String apellido;
     @Column(name="email")
     private String email;
+    @Column(name="password")
+    private String password;
 
     public String getUsername() {
         return username;
@@ -38,19 +40,9 @@ public class User {
         this.email = email;
     }
 
-    @Column(name="password")
-    private String password;
-
-    private String token;
-
     public User() {
     }
 
-    public User(String name, String password, String token) {
-        this.name = name;
-        this.password = password;
-        this.token = token;
-    }
 
     public String getName() {
         return name;
@@ -68,11 +60,4 @@ public class User {
         this.password = password;
     }
 
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
 }
